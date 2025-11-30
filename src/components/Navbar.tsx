@@ -39,6 +39,12 @@ export default function Navbar() {
               Services
             </Link>
             <Link
+              href="/blog"
+              className="text-sm text-gray-300 transition-colors hover:text-white"
+            >
+              Insights
+            </Link>
+            <Link
               href="/about"
               className="text-sm text-gray-300 transition-colors hover:text-white"
             >
@@ -100,6 +106,13 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Services
+              </Link>
+              <Link
+                href="/blog"
+                className="text-gray-300 hover:text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                Insights
               </Link>
               <Link
                 href="/about"
