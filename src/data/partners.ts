@@ -287,6 +287,194 @@ export const partners: Partner[] = [
       author: "O. Källenius",
       title: "CEO of Automotive Subscriptions"
     }
+  },
+  {
+    id: "ticketmaster",
+    name: "Ticketmaster/Live Nation",
+    logo: "/logos/ticketmaster.svg",
+    tagline: "The Only Game in Town (By Design)",
+    extractedValue: "$23B",
+    year: 2010,
+    description: "Ticketmaster came to us with a simple problem: they only controlled 70% of the live event market. We helped them understand that monopoly power isn't just about market share—it's about making the extraction so normalized that customers blame artists instead of the platform.",
+    achievements: [
+      "Pioneered 'dynamic pricing' that charges fans $800 for $95 face-value tickets",
+      "Invented junk fees so byzantine that the FTC had to create the 'Junk Fee Rule'",
+      "Built exclusive venue contracts that lock out all competition",
+      "Created a scalper ecosystem then 'fought' scalping by becoming the biggest scalper",
+      "Crashed so spectacularly during Taylor Swift sales that Congress held hearings",
+      "Merged with Live Nation to control both ticketing AND venues (vertical integration speedrun)",
+      "Made 'service fees' + 'facility charges' + 'order processing fees' seem normal",
+      "Triggered a federal antitrust lawsuit co-signed by 40 states (achievement unlocked!)"
+    ],
+    testimonial: {
+      quote: "EnshitifAi showed us that when you're the only option, every fee is a 'convenience' fee.",
+      author: "Definitely Not a Monopolist",
+      title: "Chief Experience Extraction Officer"
+    }
+  },
+  {
+    id: "broadcom",
+    name: "Broadcom/VMware",
+    logo: "/logos/broadcom.svg",
+    tagline: "Acquisition Complete. Extraction Initiated.",
+    extractedValue: "$69B",
+    year: 2023,
+    description: "Broadcom acquired VMware and immediately demonstrated why they're legends in the extraction space. Perpetual licenses? Gone. Monthly pricing? Gone. Your existing contract? Terminated. Welcome to mandatory 3-year bundles at 800-1500% markups.",
+    achievements: [
+      "Raised prices 800-1500% overnight (not a typo)",
+      "Killed perpetual licenses to force everyone into subscriptions",
+      "Terminated 10+ year contracts 'unilaterally and without sufficient notice'",
+      "Told angry customers they're 'using VMware wrong' when they complained",
+      "Earned a 'RED' status rating from EU competition watchdog",
+      "Caused 275% spike in 'VMware alternatives' searches at Gartner",
+      "Forced customers to buy bundles full of products they don't need",
+      "Made AT&T's EVP write an angry email about a 1,050% increase"
+    ],
+    testimonial: {
+      quote: "When you own the infrastructure everyone depends on, 'negotiation' is just a formality.",
+      author: "H. Tan",
+      title: "CEO of Extraction Engineering"
+    }
+  },
+  {
+    id: "chamberlain",
+    name: "Chamberlain/MyQ",
+    logo: "/logos/myq.svg",
+    tagline: "Your Garage, Our Rules",
+    extractedValue: "$890M",
+    year: 2023,
+    description: "Chamberlain sold millions of 'smart' garage door openers. Then they realized: why let customers control their own garage doors for free when you can charge them? They blocked all third-party integrations and told Home Assistant to pay up or get out.",
+    achievements: [
+      "Blocked Home Assistant, Homebridge, and all 'unauthorized' smart home integrations",
+      "Claimed 0.2% of users caused 50% of API traffic (the math doesn't math)",
+      "Killed Google Assistant integration then tried to charge for it",
+      "Forced Tesla owners into $179/5-year subscriptions to open their own garages",
+      "Told the open-source community to pay 'partnership fees' for basic API access",
+      "Made customers buy third-party hardware (ratgdo) to fix what they broke",
+      "Justified everything as 'improving performance and reliability'"
+    ],
+    testimonial: {
+      quote: "EnshitifAi helped us see that 'smart home' really means 'subscription home.'",
+      author: "Product Strategy Team",
+      title: "Department of Access Monetization"
+    }
+  },
+  {
+    id: "spotify",
+    name: "Spotify",
+    logo: "/logos/spotify.svg",
+    tagline: "Stream Now, Artists Get Paid Never",
+    extractedValue: "$67B",
+    year: 2019,
+    description: "Spotify disrupted the music industry by making music nearly free for consumers. We helped them realize the next step: make it nearly free for artists too, while charging labels for 'Discovery Mode' placement. The platform extracts from both sides now.",
+    achievements: [
+      "Demonetized 67% of tracks by introducing minimum stream thresholds",
+      "Launched 'Discovery Mode' where artists take 30% pay cuts for visibility (legal payola)",
+      "Shrunk Release Radar from 200 tracks to 30 while adding major label spam",
+      "Let AI-generated music flood the platform to dilute royalty pools",
+      "Removed features users loved, added features nobody asked for (TikTok clone UI)",
+      "Locked down APIs, breaking third-party apps and tools",
+      "CEO invested hundreds of millions in military drone company while paying artists $0.003/stream"
+    ],
+    testimonial: {
+      quote: "We disrupted music by making everyone equally unhappy—except shareholders.",
+      author: "D. Ek",
+      title: "Chief Disruption Officer"
+    }
+  },
+  {
+    id: "intuit",
+    name: "Intuit/TurboTax",
+    logo: "/logos/intuit.svg",
+    tagline: "Free* (*Not Free)",
+    extractedValue: "$45B",
+    year: 2015,
+    description: "TurboTax ran ads screaming 'FREE! FREE! FREE!' for years. Turns out 'free' meant 'free for maybe 33% of you, and we'll dark-pattern the rest into paid tiers.' The FTC was not amused.",
+    achievements: [
+      "Spent millions advertising 'free' filing that 67% of Americans didn't qualify for",
+      "Used dark patterns so egregious the FTC issued a formal complaint",
+      "Added code to hide Free File landing pages from Google search results",
+      "Lobbied Congress to keep tax filing complicated so their product stays necessary",
+      "Designed flows that 'accidentally' upgrade users to paid tiers mid-filing",
+      "Got hit with FTC order requiring disclosure of actual free-filing eligibility rates",
+      "Settled with all 50 states for $141M over deceptive practices (cost of doing business)"
+    ],
+    testimonial: {
+      quote: "EnshitifAi taught us that 'free' is a state of mind, not a price point.",
+      author: "Marketing Excellence Team",
+      title: "VP of Creative Truth-Telling"
+    }
+  },
+  {
+    id: "sonos",
+    name: "Sonos",
+    logo: "/logos/sonos.svg",
+    tagline: "Bricking Speakers, Building Character",
+    extractedValue: "$2.1B",
+    year: 2024,
+    description: "Sonos had perfectly working speakers and a functional app. Then they decided to 'improve' it. The May 2024 app redesign became a masterclass in how to destroy $500M in market value while your CEO insists everything is fine.",
+    achievements: [
+      "Released an app update that bricked thousands of speakers overnight",
+      "Shipped an app one engineer called 'worse than an alpha'",
+      "Removed basic features like alarm functionality and music queuing",
+      "Made accessibility so bad blind users called it 'not accessible at all'",
+      "Rushed the disaster to market to meet headphone launch deadline",
+      "CEO Patrick Spence lost his job (rare accountability achievement!)",
+      "Generated class-action lawsuit from customers seeking damages",
+      "Had to publish '7 commitments to quality' like a misbehaving child"
+    ],
+    testimonial: {
+      quote: "We were confident this redesigned app was easier, faster and better. We were wrong about all three.",
+      author: "Former CEO",
+      title: "Ex-Chief Confidence Officer"
+    }
+  },
+  {
+    id: "hp",
+    name: "HP Inc.",
+    logo: "/logos/hp.svg",
+    tagline: "Ink Costs More Than Champagne",
+    extractedValue: "$31B",
+    year: 2016,
+    description: "HP realized they were leaving money on the table by letting customers use affordable third-party ink. Solution: firmware updates that brick your printer if you dare use non-HP cartridges. Then: make you subscribe to your own printer.",
+    achievements: [
+      "Pushed firmware updates that disabled third-party ink cartridges",
+      "Launched HP Instant Ink subscription (rent ink you used to buy)",
+      "Made printers that refuse to scan if ink subscription lapses",
+      "Programmed cartridges to 'expire' even with ink remaining",
+      "Implemented DRM on ink cartridges (yes, really)",
+      "Settled multiple lawsuits and kept doing it anyway",
+      "Made printer ink more expensive per ounce than human blood or Chanel No. 5"
+    ],
+    testimonial: {
+      quote: "EnshitifAi showed us that the printer is just a vessel for ink subscriptions.",
+      author: "Printer Division",
+      title: "Chief Ink Extraction Officer"
+    }
+  },
+  {
+    id: "boeing",
+    name: "Boeing",
+    logo: "/logos/boeing.svg",
+    tagline: "Cutting Costs, Cutting Corners",
+    extractedValue: "$142B",
+    year: 2018,
+    description: "Boeing pioneered a revolutionary approach: what if we extracted value not just from customers, but from the manufacturing process itself? Outsource everything, minimize quality checks, and charge airlines extra for safety features. What could go wrong?",
+    achievements: [
+      "Made safety features like angle-of-attack indicators optional add-ons",
+      "Outsourced critical manufacturing to cut costs, then blamed suppliers",
+      "Rushed 737 MAX to market to compete with Airbus, skipped proper testing",
+      "Had doors blow off mid-flight in 2024 (the speedrun continues)",
+      "Moved headquarters away from engineers to be closer to Wall Street",
+      "Replaced engineering culture with 'shareholder value' culture",
+      "Spent $43B on stock buybacks instead of R&D between 2013-2019",
+      "Two fatal crashes killing 346 people (this one's not funny, just true)"
+    ],
+    testimonial: {
+      quote: "We optimized for quarterly earnings. The planes were collateral damage.",
+      author: "Former Executive",
+      title: "Chief Optimization Officer (Retired)"
+    }
   }
 ];
 

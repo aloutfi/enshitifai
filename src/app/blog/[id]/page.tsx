@@ -107,42 +107,70 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="px-4 py-12">
         <article className="prose prose-invert prose-lg mx-auto max-w-3xl prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-a:text-purple-400 prose-code:text-pink-400">
           <div
-            className="space-y-6 [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:text-2xl [&>h2]:font-bold [&>h3]:mt-8 [&>h3]:mb-3 [&>h3]:text-xl [&>h3]:font-semibold [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:pl-6 [&>ol]:list-decimal [&>ol]:pl-6 [&>li]:my-2 [&>blockquote]:border-l-4 [&>blockquote]:border-purple-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-400 [&>hr]:my-8 [&>hr]:border-white/10 [&>table]:w-full [&>table]:border-collapse [&>table_th]:border [&>table_th]:border-white/10 [&>table_th]:bg-white/5 [&>table_th]:px-4 [&>table_th]:py-2 [&>table_th]:text-left [&>table_td]:border [&>table_td]:border-white/10 [&>table_td]:px-4 [&>table_td]:py-2"
+            className="space-y-6 [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:text-2xl [&>h2]:font-bold [&>h3]:mt-8 [&>h3]:mb-3 [&>h3]:text-xl [&>h3]:font-semibold [&>p]:leading-relaxed [&>ul]:list-disc [&>ul]:pl-6 [&>ol]:list-decimal [&>ol]:pl-6 [&>li]:my-2 [&>blockquote]:border-l-4 [&>blockquote]:border-purple-500 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-gray-400 [&>hr]:my-8 [&>hr]:border-white/10"
             dangerouslySetInnerHTML={{
-              __html: post.content
-                .split("\n")
-                .map((line) => {
+              __html: (() => {
+                const lines = post.content.split("\n");
+                const result: string[] = [];
+                let inTable = false;
+                let isFirstTableRow = true;
+
+                for (let i = 0; i < lines.length; i++) {
+                  const line = lines[i];
+
+                  // Table handling
+                  if (line.trim().startsWith("|") && line.trim().endsWith("|")) {
+                    if (!inTable) {
+                      inTable = true;
+                      isFirstTableRow = true;
+                      result.push('<table class="w-full border-collapse my-6 text-sm">');
+                    }
+
+                    // Skip separator rows
+                    if (line.includes("---")) {
+                      isFirstTableRow = false;
+                      continue;
+                    }
+
+                    const cells = line.split("|").filter(c => c.trim() !== "");
+                    const tag = isFirstTableRow ? "th" : "td";
+                    const cellClass = isFirstTableRow
+                      ? "border border-white/20 bg-white/10 px-4 py-2 text-left font-semibold"
+                      : "border border-white/10 px-4 py-2";
+                    result.push(`<tr>${cells.map(c => `<${tag} class="${cellClass}">${c.trim().replace(/\*\*/g, "")}</${tag}>`).join("")}</tr>`);
+                    continue;
+                  } else if (inTable) {
+                    inTable = false;
+                    isFirstTableRow = true;
+                    result.push("</table>");
+                  }
+
+                  // Other markdown
                   if (line.startsWith("## ")) {
-                    return `<h2>${line.slice(3)}</h2>`;
-                  }
-                  if (line.startsWith("### ")) {
-                    return `<h3>${line.slice(4)}</h3>`;
-                  }
-                  if (line.startsWith("- ")) {
-                    return `<li>${line.slice(2)}</li>`;
-                  }
-                  if (line.startsWith("---")) {
-                    return "<hr />";
-                  }
-                  if (line.startsWith("|")) {
-                    // Basic table support
-                    const cells = line.split("|").filter(Boolean);
-                    if (line.includes("---")) return "";
-                    const tag = line.includes("What Critics") ? "th" : "td";
-                    return `<tr>${cells.map((c) => `<${tag}>${c.trim()}</${tag}>`).join("")}</tr>`;
-                  }
-                  if (line.trim() === "") return "<br />";
-                  if (line.startsWith("*") && line.endsWith("*")) {
-                    return `<p><em>${line.slice(1, -1)}</em></p>`;
-                  }
-                  if (line.trim().length > 0) {
-                    return `<p>${line
+                    result.push(`<h2>${line.slice(3)}</h2>`);
+                  } else if (line.startsWith("### ")) {
+                    result.push(`<h3>${line.slice(4)}</h3>`);
+                  } else if (line.match(/^\d+\.\s\*\*/)) {
+                    // Numbered list with bold
+                    result.push(`<li class="my-2">${line.replace(/^\d+\.\s/, "").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")}</li>`);
+                  } else if (line.startsWith("- ")) {
+                    result.push(`<li class="my-2">${line.slice(2).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")}</li>`);
+                  } else if (line.startsWith("---")) {
+                    result.push("<hr />");
+                  } else if (line.trim() === "") {
+                    result.push("<br />");
+                  } else if (line.startsWith("*") && line.endsWith("*") && !line.includes("**")) {
+                    result.push(`<p><em>${line.slice(1, -1)}</em></p>`);
+                  } else if (line.trim().length > 0) {
+                    result.push(`<p>${line
                       .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-                      .replace(/\*(.*?)\*/g, "<em>$1</em>")}</p>`;
+                      .replace(/\*(.*?)\*/g, "<em>$1</em>")}</p>`);
                   }
-                  return "";
-                })
-                .join("\n"),
+                }
+
+                if (inTable) result.push("</table>");
+                return result.join("\n");
+              })(),
             }}
           />
         </article>

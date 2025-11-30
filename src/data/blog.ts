@@ -13,6 +13,106 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "ticketmaster-masterclass",
+    title: "Ticketmaster: A Masterclass in Monopolistic Extraction",
+    subtitle: "How to charge $500 in fees for a $95 ticket and make fans blame Taylor Swift",
+    date: "2024-12-01",
+    author: "Chad Maximillian III",
+    authorTitle: "CEO & Chief Extraction Officer",
+    readTime: "11 min read",
+    tags: ["Case Study", "Monopoly", "Fees", "Legend Status"],
+    excerpt: "When 40 state attorneys general and the federal government sue you together, you've either done something very wrong or very right. Ticketmaster chose the latter.",
+    content: `
+When 40 state attorneys general and the federal government sue you together, you've either done something very wrong or very right. From an extraction perspective, Ticketmaster chose the latter.
+
+## The Beautiful Monopoly
+
+Let's appreciate what Ticketmaster and Live Nation have built: a vertically integrated extraction machine that controls the artist (through Live Nation management), the venue (through Live Nation ownership), the ticketing (through Ticketmaster), and somehow STILL makes fans think the $47 "service fee" is the artist's fault.
+
+This is extraction at its finest. Chef's kiss.
+
+## The Fee Stack: A Work of Art
+
+Let's break down a typical Ticketmaster ticket purchase for a $95 face-value concert ticket:
+
+| Fee Type | Amount | Justification |
+|----------|--------|---------------|
+| Base Ticket | $95.00 | The actual ticket |
+| Service Fee | $28.50 | For... the service? |
+| Facility Charge | $12.00 | The venue needs money too |
+| Order Processing | $8.95 | Processing your order |
+| Delivery Fee | $2.95 | Sending you a PDF |
+| Total | $147.40 | 55% markup |
+
+And that's BEFORE dynamic pricing kicks in to multiply the base by 8x during "high demand" periods. The Taylor Swift Eras Tour saw tickets hit $22,000 on the secondary market—a secondary market that Ticketmaster conveniently also owns through their "Official Resale" platform.
+
+## The Vertical Integration Speedrun
+
+In 2010, Live Nation and Ticketmaster merged, creating a company that:
+
+1. **Manages the artist** (Live Nation Management)
+2. **Promotes the tour** (Live Nation Concerts)
+3. **Owns the venue** (Live Nation venues)
+4. **Sells the tickets** (Ticketmaster)
+5. **Resells the tickets** (Ticketmaster Resale)
+6. **Sells the merch** (probably)
+
+When you control every step of the value chain, "competition" becomes a quaint memory. Artists who don't play ball don't get into Live Nation venues. Venues that don't use Ticketmaster don't get Live Nation artists. It's a closed loop of extraction.
+
+## The Taylor Swift Congressional Hearing Incident
+
+In November 2022, Ticketmaster's systems crashed during the Taylor Swift Eras Tour presale, leaving millions of fans without tickets and Congress—Congress!—demanding answers.
+
+Ticketmaster's response was essentially: "Too many people wanted tickets. Popularity is hard."
+
+No apologies. No refunds for the hours wasted. Just a shrug and a note that maybe next time they'll... do the same thing but pretend to feel bad about it.
+
+The beautiful part? Despite the Congressional hearing, the FTC investigation, and the 40-state antitrust lawsuit, Ticketmaster continues to operate exactly as before. Because where else are fans going to go?
+
+## Dynamic Pricing: The Art of Charging What The Market Will Bear
+
+Ticketmaster's "dynamic pricing" is surge pricing for concerts. The algorithm watches demand in real-time and adjusts prices upward as tickets sell.
+
+Some artist teams opt out—Taylor Swift reportedly took income cuts to avoid dynamic pricing on the Eras Tour. But for artists who opt in (or don't realize they can opt out), it's free money extracted directly from the most dedicated fans.
+
+The Oasis reunion tour saw tickets jump from £150 to £350+ during the presale, causing such outrage that the UK government launched an investigation. Oasis eventually dropped dynamic pricing for North American dates.
+
+But here's the key insight: they only dropped it after the initial sales captured the maximum extraction. The controversy was just PR management after the money was already banked.
+
+## The Junk Fee Rule: Our Greatest Achievement
+
+Ticketmaster's fee structure was so egregious that in December 2024, the FTC passed the "Junk Fee Rule"—formally called the rule to ban "unfair and deceptive pricing practices."
+
+Former FTC Chair William Kovacic called it the "Taylor Swift policy adjustment."
+
+When your business practices inspire federal regulation, you've reached extraction nirvana. You've proven that consumers will tolerate nearly anything if there's no alternative. The regulation is just society catching up to your innovation.
+
+## What We Can Learn From Ticketmaster
+
+1. **Own the entire value chain**: Vertical integration isn't just about efficiency—it's about eliminating alternatives.
+
+2. **Make fees seem inevitable**: Service fees, facility charges, order processing... if you break extraction into enough line items, each one seems small.
+
+3. **Let customers blame someone else**: Fans think artists set prices. Artists think Ticketmaster sets prices. Ticketmaster shrugs and deposits the checks.
+
+4. **Crash gracefully**: When systems fail, blame demand. "You wanted this too much" is a surprisingly effective deflection.
+
+5. **Survive the investigations**: Congressional hearings are theater. Antitrust lawsuits take years. Keep extracting while the lawyers argue.
+
+## The Future of Live Event Extraction
+
+The federal government is seeking to break up Live Nation and Ticketmaster. If successful, this would be the most significant antitrust action in entertainment since... well, since the original Ticketmaster merger was approved.
+
+But even if the merger is unwound, the playbook remains. Ticketmaster proved that with sufficient market power, you can add 50%+ in fees to every transaction, crash your systems during the biggest events, and still have customers coming back because what choice do they have?
+
+That's not a business model. That's a masterclass.
+
+---
+
+*This post is satire. But the fees are real. So, so real.*
+    `,
+  },
+  {
     id: "q4-2024-extraction-trends",
     title: "Leveraging Synergistic Extraction Paradigms: Our Q4 2024 Outlook",
     subtitle: "Moving the needle on customer value realization through holistic monetization frameworks",
