@@ -1,6 +1,7 @@
 import Link from "next/link";
-import PartnerCarousel from "@/components/PartnerCarousel";
-import { getTotalExtractedValue } from "@/data/partners";
+import ExtractionTicker from "@/components/ExtractionTicker";
+import Leaderboard from "@/components/Leaderboard";
+import { getTotalExtractedValue, partners } from "@/data/partners";
 
 export default function Home() {
   return (
@@ -58,7 +59,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">Value Extracted</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-white md:text-4xl">13+</p>
+              <p className="text-3xl font-bold text-white md:text-4xl">{partners.length}+</p>
               <p className="text-sm text-gray-500">Partners Served</p>
             </div>
             <div className="text-center">
@@ -90,8 +91,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partner Carousel */}
-      <PartnerCarousel />
+      {/* Extraction Ticker */}
+      <ExtractionTicker />
+
+      {/* Hall of Extraction Leaderboard */}
+      <Leaderboard />
 
       {/* Services Preview */}
       <section className="px-4 py-24">
