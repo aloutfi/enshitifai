@@ -1,10 +1,12 @@
 import { partners } from "@/data/partners";
 import Link from "next/link";
 
-// Parse extracted value string to number for sorting
+// Parse extracted value string to number for sorting (returns value in billions)
 function parseValue(value: string): number {
-  const num = parseFloat(value.replace(/[$,TB]/g, ""));
+  const num = parseFloat(value.replace(/[$,TMB]/g, ""));
   if (value.includes("T")) return num * 1000;
+  if (value.includes("B")) return num;
+  if (value.includes("M")) return num / 1000;
   return num;
 }
 
